@@ -93,7 +93,7 @@ public class Ciclo {
 
             int qtdEquipes = totalAlunos / alunosPorEquipe;
 
-            // forma as equipes conferindo
+            // forma as equipes usando a lAux como base
             // verifica se os alunos já estiveram na mesma equipe antes            
 
             // armazena os alunos que estão na mesma equipe na lista exColegas
@@ -118,7 +118,7 @@ public class Ciclo {
                 qtdAlunos.add(input.nextInt());
             }
             
-            // forma as equipes conferindo
+            // forma as equipes usando a lAux como base
             // verifica se os alunos já estiveram na mesma equipe antes          
             
             // armazena os alunos que estão na mesma equipe na lista exColegas
