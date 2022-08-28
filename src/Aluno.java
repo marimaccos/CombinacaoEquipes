@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Aluno {
     private String nome;
+    // lista para armazenar os alunos que já estiveram na mesma equipe
     private ArrayList<String> exColega;
 
     // construtor
