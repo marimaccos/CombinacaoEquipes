@@ -6,13 +6,15 @@ public class Main {
 
         int totalAlunos;
         int ciclos;
-
+        
+        // cria lista para armazenar todos os alunos 
         ArrayList<Aluno> lTurma = new ArrayList<Aluno>();
+        // cria lista para armazenar alunos por equipe em cada ciclo
         ArrayList<Integer> lAlunosPorEquipe = new ArrayList<Integer>();
+        // cria lista para armazenar todos os ciclos
         ArrayList<Ciclo> lCiclos = new ArrayList<Ciclo>();
 
-
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); 
 
         // entrada de dados
         System.out.print("Digite quantos alunos na turma: ");
@@ -24,7 +26,7 @@ public class Main {
             String nomeAlunoAtual = input.next();
             // cria objeto para armazenar nome do aluno
             Aluno alunoAtual = new Aluno(nomeAlunoAtual);
-            // adiciona cada aluno na lista
+            // add cada aluno na lista
             lTurma.add(alunoAtual);
         }
 
@@ -35,7 +37,7 @@ public class Main {
         for (int i = 0; i < ciclos; i++) {
             System.out.printf("Digite o numero de alunos por equipe do ciclo %d: ", i+1);
             int numeroAlunos = input.nextInt();
-            // armazena na lista
+            // add numero de alunos por equipe na lista
             lAlunosPorEquipe.add(numeroAlunos);
 
             // cria objeto para armazenar cada ciclo
@@ -44,16 +46,15 @@ public class Main {
             lCiclos.add(cicloAtual);
         }
 
-        // loop para fazer e imprimir as divisoes das equipes de cada ciclo
+        // faz e imprime as divisões das equipes de cada ciclo
         for (int i = 0; i < ciclos; i++) {
             // verifica se é o primeiro ciclo
             if (i == 0) {
-                lCiclos.get(i).divideEquipesRandom(lTurma);
+                // faz divisão aleatória
+                lCiclos.get(i).divideEquipesRandom(lTurma); 
             } else {
                 lCiclos.get(i).divideEquipes(lTurma);
             }
         }
-
-
     }
 }
